@@ -5,6 +5,7 @@ Feed-forward network with SwiGLU activation
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import math
 
 class VirtueMLP(nn.Module):
     """
