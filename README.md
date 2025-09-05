@@ -1,7 +1,3 @@
-# README.md for Virtue Multimodal — Updated with Repo Structure
-
-***
-
 # Virtue Multimodal Language Model
 
 **270M-parameter lightweight multimodal model distilled from Google’s Gemma 3 4B-IT.**
@@ -126,7 +122,7 @@ python scripts/inference/chat_demo.py
 
 ## License
 
-MIT License — See LICENSE file for details.
+MIT License: See LICENSE file for details.
 
 ***
 
