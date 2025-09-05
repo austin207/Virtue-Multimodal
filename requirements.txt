@@ -1,0 +1,199 @@
+# Virtue Multimodal - Requirements.txt
+# Python 3.10+ recommended (3.12 optimal for compatibility)
+
+# ================================
+# Core ML/DL Frameworks
+# ================================
+torch>=2.1.0,<3.0.0                    # PyTorch 2.1+ with Flash Attention support
+torchvision>=0.16.0                    # Vision utilities and transforms
+torchaudio>=2.1.0                      # Audio processing (for future multimodal expansion)
+
+# Transformers & NLP
+transformers>=4.36.0                   # Hugging Face Transformers (latest with Gemma support)
+tokenizers>=0.14.0                     # Fast tokenization
+sentencepiece>=0.1.99                  # SentencePiece tokenizer (for Gemma)
+
+# Training & Optimization
+accelerate>=0.25.0                     # Distributed training and mixed precision
+datasets>=2.16.0                       # Dataset loading and processing
+evaluate>=0.4.1                        # Model evaluation metrics
+
+# Quantization & Efficiency
+bitsandbytes>=0.41.0                   # 4-bit/8-bit quantization for teacher model
+flash-attn>=2.3.0                      # Flash Attention 2 (CUDA required)
+peft>=0.7.0                           # Parameter Efficient Fine-tuning
+
+# ================================
+# Computer Vision & Multimodal
+# ================================
+Pillow>=10.1.0                        # Image processing
+opencv-python>=4.8.1                  # Computer vision utilities
+timm>=0.9.12                          # Vision models and preprocessing
+torchvision>=0.16.0                   # PyTorch vision utilities
+
+# ================================
+# Data Science & Numerical Computing
+# ================================
+numpy>=1.24.0,<2.0.0                  # Numerical computing foundation
+pandas>=2.1.0                         # Data manipulation and analysis
+scipy>=1.11.0                         # Scientific computing
+
+# ================================
+# Visualization & Monitoring
+# ================================
+matplotlib>=3.7.0                     # Plotting and visualization
+seaborn>=0.12.0                       # Statistical visualization
+plotly>=5.17.0                        # Interactive plotting
+tensorboard>=2.15.0                   # Training monitoring
+wandb>=0.16.0                         # Experiment tracking and monitoring
+
+# ================================
+# Development & Testing
+# ================================
+pytest>=7.4.0                         # Testing framework
+pytest-cov>=4.1.0                     # Test coverage
+black>=23.11.0                        # Code formatting
+isort>=5.13.0                         # Import sorting
+flake8>=6.1.0                         # Linting
+mypy>=1.7.0                          # Type checking
+pre-commit>=3.6.0                     # Git hooks
+
+# ================================
+# Configuration & Utilities
+# ================================
+omegaconf>=2.3.0                      # Configuration management
+hydra-core>=1.3.0                     # Configuration framework
+python-dotenv>=1.0.0                  # Environment variable management
+tqdm>=4.66.0                          # Progress bars
+rich>=13.7.0                          # Rich terminal output
+
+# ================================
+# API & Deployment
+# ================================
+fastapi>=0.105.0                      # REST API framework
+uvicorn>=0.24.0                       # ASGI server
+gradio>=4.8.0                         # Interactive demos
+streamlit>=1.29.0                     # Web apps for demos
+
+# ================================
+# Storage & Database
+# ================================
+sqlite3                               # Built-in database (for metadata)
+h5py>=3.10.0                         # HDF5 file format
+zarr>=2.16.0                         # Cloud-optimized array storage
+
+# ================================
+# Distributed Computing & Cloud
+# ================================
+boto3>=1.34.0                        # AWS SDK (for S3 storage)
+google-cloud-storage>=2.10.0         # Google Cloud Storage
+fsspec>=2023.12.0                    # Filesystem interfaces
+
+# ================================
+# Memory & Performance Optimization
+# ================================
+psutil>=5.9.0                        # System and process utilities
+GPUtil>=1.4.0                        # GPU monitoring
+py-cpuinfo>=9.0.0                    # CPU information
+
+# ================================
+# Jupyter & Interactive Development
+# ================================
+jupyter>=1.0.0                       # Jupyter notebook
+ipywidgets>=8.1.0                    # Interactive widgets
+notebook>=7.0.0                      # Notebook interface
+
+# ================================
+# Optional: Advanced Features
+# ================================
+# xformers>=0.0.23                   # Memory-efficient transformers (if available)
+# triton>=2.1.0                      # GPU kernel acceleration
+# apex                               # NVIDIA Apex for mixed precision (if using older PyTorch)
+
+# ================================
+# Version Constraints for Compatibility
+# ================================
+# Ensure compatible versions
+torch-audio>=2.1.0                   # Audio processing compatibility
+protobuf>=3.20.0,<5.0.0              # Protocol buffers (avoid conflicts)
+requests>=2.31.0                     # HTTP requests
+urllib3>=1.26.0,<3.0.0               # URL handling
+charset-normalizer>=3.3.0            # Character encoding
+
+# ================================
+# Development Dependencies (Optional)
+# ================================
+memory-profiler>=0.61.0              # Memory usage profiling
+line-profiler>=4.1.0                 # Line-by-line profiling
+cProfile                              # Built-in profiling
+
+# ================================
+# Platform-Specific (Windows/Linux)
+# ================================
+# pywin32>=306; sys_platform == "win32"           # Windows utilities
+# colorama>=0.4.6; sys_platform == "win32"       # Windows color terminal
+
+# ================================
+# Documentation
+# ================================
+sphinx>=7.2.0                        # Documentation generation
+sphinx-rtd-theme>=1.3.0              # Read the Docs theme
+myst-parser>=2.0.0                   # Markdown parser for Sphinx
+
+# ================================
+# Git Integration
+# ================================
+GitPython>=3.1.40                    # Git repository interaction
+huggingface-hub>=0.20.0              # Hugging Face Hub integration
+
+# ================================
+# Audio/Video (Future Expansion)
+# ================================
+librosa>=0.10.1                      # Audio analysis
+soundfile>=0.12.1                    # Audio file I/O
+av>=11.0.0                           # Video processing
+
+# ================================
+# Security & Authentication
+# ================================
+cryptography>=41.0.0                 # Cryptographic utilities
+keyring>=24.3.0                      # Secure credential storage
+
+# ================================
+# Model Export & Deployment
+# ================================
+onnx>=1.15.0                         # ONNX model format
+onnxruntime>=1.16.0                  # ONNX runtime
+optimum>=1.16.0                      # Hugging Face optimization tools
+
+# ================================
+# Data Loading & Processing
+# ================================
+webdataset>=0.2.48                   # Efficient dataset loading
+albumentations>=1.3.1                # Image augmentation
+imgaug>=0.4.0                        # Image augmentation (alternative)
+
+# ================================
+# Text Processing
+# ================================
+nltk>=3.8.1                          # Natural language toolkit
+spacy>=3.7.0                         # Advanced NLP
+regex>=2023.10.3                     # Regular expressions
+
+# ================================
+# Model Registry & Versioning
+# ================================
+mlflow>=2.8.0                        # ML lifecycle management
+dvc>=3.41.0                          # Data version control
+
+# ================================
+# Container & Orchestration
+# ================================
+docker>=6.1.0                        # Docker Python SDK
+kubernetes>=28.1.0                   # Kubernetes Python client
+
+# ================================
+# Environment Management
+# ================================
+conda-pack>=0.7.0                    # Conda environment packaging
+pip-tools>=7.3.0                     # Pip requirements management

@@ -1,0 +1,38 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Ignore virtual environments
+venv/
+.env/
+*.env
+.env.*
+
+# Ignore checkpoints and model weights
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+
+# Ignore logs and outputs (optional, keep if you don’t want them in git)
+logs/
+outputs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
