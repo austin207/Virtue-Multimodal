@@ -1,0 +1,30 @@
+# docker/Dockerfile.training
+
+FROM nvidia/cuda:12.8.1-cudnn8-devel-ubuntu22.04
+
+# Set workdir
+WORKDIR /workspace/virtue-multimodal
+
+# Install system dependencies
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    python3.10 python3.10-venv python3-pip git curl build-essential libgl1-mesa-glx && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create and activate virtual environment
+RUN python3.10 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy project files
+COPY . .
+
+# Install Python dependencies
+RUN pip install --upgrade pip && \
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128 && \
+    pip install -r requirements-docker.txt
+
+# Expose ports for monitoring
+EXPOSE 6006 8888
+
+# Default command: run training script
+CMD ["bash", "scripts/training/train_virtue.py"]

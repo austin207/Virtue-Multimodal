@@ -1,0 +1,42 @@
+# docker/requirements-docker.txt
+
+# Core
+torch>=2.1.0,<3.0.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# Transformers & NLP
+transformers>=4.36.0
+tokenizers>=0.14.0
+sentencepiece>=0.1.99
+
+# Training & Optimization
+accelerate>=0.25.0
+datasets>=2.16.0
+evaluate>=0.4.1
+bitsandbytes>=0.41.0
+peft>=0.7.0
+
+# Vision & Multimodal
+Pillow>=10.1.0
+opencv-python>=4.8.1
+timm>=0.9.12
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.1.0
+scipy>=1.11.0
+
+# Monitoring & Logging
+tensorboard>=2.15.0
+wandb>=0.16.0
+
+# Dev & Testing
+pytest>=7.4.0
+black>=23.11.0
+isort>=5.13.0
+
+# API & Deployment
+fastapi>=0.105.0
+uvicorn>=0.24.0
+gradio>=4.8.0

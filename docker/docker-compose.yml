@@ -1,0 +1,27 @@
+# docker/docker-compose.yml
+
+version: "3.8"
+services:
+  training:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.training
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ../:/workspace/virtue-multimodal
+    ports:
+      - "6006:6006"   # TensorBoard
+      - "8888:8888"   # Jupyter
+  inference:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.inference
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0
+    volumes:
+      - ../:/workspace/virtue-multimodal
+    ports:
+      - "8000:8000"
