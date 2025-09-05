@@ -194,3 +194,11 @@ virtue-multimodal/
     └── README.md                 # Output organization
 
 ```
+
+# To run training:
+bash scripts/setup/install_dependencies.sh
+python scripts/setup/download_teacher_model.py
+python scripts/training/train_virtue.py
+
+# To serve API:
+python scripts/inference/api_server.py
